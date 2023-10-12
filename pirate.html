@@ -24,6 +24,7 @@
             <div style="color: lightcoral;" id="penalty">Penalty is zero</div>
             <div style="color: lightcoral;" onclick="help()">Click for help</div>
             <div style="color: lightcoral;" id="help">Help report</div></br>
+            <button class="btn btn-primary" onclick="newGame()">New Game</button>
         <div class="container">
             <div class="container row">
                 <div class="treasureloc">
@@ -182,6 +183,15 @@
        
     }
 
+    function newGame(){
+     treasureLocation = Math.floor(Math.random() * 25);
+     trapLocation=Math.floor(Math.random() * 25);
+    checkCount=0
+    penalty=0
+    document.getElementById("locations").innerHTML="Number of locations checked is "+checkCount+"."
+    document.getElementById("penalty").innerHTML="Penalty is "+penalty+"."
+    
+    }
 </script>
          </body>
 </html>
